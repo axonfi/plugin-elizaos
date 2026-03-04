@@ -1,0 +1,26 @@
+{
+  "name": "@axonfi/plugin-elizaos",
+  "version": "0.1.0",
+  "description": "ElizaOS plugin for Axon — treasury and payment infrastructure for AI agents",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@axonfi/sdk": "*"
+  },
+  "peerDependencies": {
+    "@elizaos/core": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@elizaos/core": "^1.7.0",
+    "typescript": "^5.7.0",
+    "tsup": "^8.0.0"
+  },
+  "keywords": ["elizaos", "plugin", "axon", "axonfi", "treasury", "payments", "ai-agents"],
+  "license": "MIT"
+}
