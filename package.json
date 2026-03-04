@@ -5,7 +5,7 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": ["dist", "images"],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit"
@@ -20,6 +20,34 @@
     "@elizaos/core": "^1.7.0",
     "typescript": "^5.7.0",
     "tsup": "^8.0.0"
+  },
+  "agentConfig": {
+    "pluginType": "elizaos:plugin:1.0.0",
+    "pluginParameters": {
+      "AXON_BOT_PRIVATE_KEY": {
+        "type": "string",
+        "required": true,
+        "description": "Bot private key for EIP-712 signing"
+      },
+      "AXON_VAULT_ADDRESS": {
+        "type": "string",
+        "required": true,
+        "description": "Axon vault contract address"
+      },
+      "AXON_CHAIN_ID": {
+        "type": "number",
+        "required": true,
+        "description": "Chain ID (8453=Base, 42161=Arbitrum, 84532=Base Sepolia)"
+      },
+      "AXON_RELAYER_URL": {
+        "type": "string",
+        "required": false,
+        "description": "Relayer URL (defaults to https://relay.axonfi.xyz)"
+      }
+    },
+    "actions": ["AXON_SEND_PAYMENT", "AXON_SWAP_TOKENS", "AXON_EXECUTE_PROTOCOL", "AXON_CHECK_BALANCE"],
+    "providers": ["AXON_VAULT_CONTEXT"],
+    "services": ["AXON"]
   },
   "keywords": ["elizaos", "plugin", "axon", "axonfi", "treasury", "payments", "ai-agents"],
   "license": "MIT"
