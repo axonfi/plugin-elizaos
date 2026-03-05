@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@axonfi/sdk": "*"
+    "@axonfi/sdk": ">=0.1.0"
   },
   "peerDependencies": {
     "@elizaos/core": ">=1.0.0"
