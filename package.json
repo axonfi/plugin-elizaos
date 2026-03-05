@@ -49,6 +49,11 @@
     "providers": ["AXON_VAULT_CONTEXT"],
     "services": ["AXON"]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axonfi/plugin-elizaos"
+  },
+  "homepage": "https://axonfi.xyz",
   "keywords": ["elizaos", "plugin", "axon", "axonfi", "treasury", "payments", "ai-agents"],
   "license": "MIT"
 }

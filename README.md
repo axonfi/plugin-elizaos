@@ -16,7 +16,7 @@ Add these environment variables (or character settings):
 |----------|----------|-------------|
 | `AXON_BOT_PRIVATE_KEY` | Yes | Bot's private key (EIP-712 signer) |
 | `AXON_VAULT_ADDRESS` | Yes | Axon vault contract address |
-| `AXON_CHAIN_ID` | Yes | Chain ID (8453=Base, 42161=Arbitrum, 84532=Base Sepolia) |
+| `AXON_CHAIN_ID` | Yes | Chain ID — use `Chain.Base` (8453), `Chain.ArbitrumOne` (42161), or `Chain.BaseSepolia` (84532) from `@axonfi/sdk` |
 | `AXON_RELAYER_URL` | No | Relayer URL (defaults to `https://relay.axonfi.xyz`) |
 
 ## Usage
@@ -51,6 +51,17 @@ The plugin is a thin adapter between ElizaOS and `@axonfi/sdk`. Your bot signs E
 Agent receives message → Action extracts params → SDK signs EIP-712 intent
 → Relayer validates + executes → txHash returned to conversation
 ```
+
+## Links
+
+- [Website](https://axonfi.xyz)
+- [Dashboard](https://app.axonfi.xyz)
+- [Documentation](https://axonfi.xyz/llms.txt)
+- [npm — @axonfi/sdk](https://www.npmjs.com/package/@axonfi/sdk) (TypeScript SDK)
+- [PyPI — axonfi](https://pypi.org/project/axonfi/) (Python SDK)
+- [Smart Contracts](https://github.com/axonfi/contracts)
+- [Examples](https://github.com/axonfi/examples)
+- [Twitter/X — @axonfixyz](https://x.com/axonfixyz)
 
 ## License
 
