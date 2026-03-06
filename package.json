@@ -1,6 +1,6 @@
 {
   "name": "@axonfi/plugin-elizaos",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "ElizaOS plugin for Axon — treasury and payment infrastructure for AI agents",
   "type": "module",
   "main": "dist/index.js",
@@ -45,7 +45,7 @@
         "description": "Relayer URL (defaults to https://relay.axonfi.xyz)"
       }
     },
-    "actions": ["AXON_SEND_PAYMENT", "AXON_SWAP_TOKENS", "AXON_EXECUTE_PROTOCOL", "AXON_CHECK_BALANCE"],
+    "actions": ["AXON_SEND_PAYMENT", "AXON_SWAP_TOKENS", "AXON_EXECUTE_PROTOCOL", "AXON_CHECK_BALANCE", "AXON_X402_PAYMENT"],
     "providers": ["AXON_VAULT_CONTEXT"],
     "services": ["AXON"]
   },

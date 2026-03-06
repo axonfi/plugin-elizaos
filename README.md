@@ -56,6 +56,7 @@ const agent = new AgentRuntime({
 | `AXON_SWAP_TOKENS` | In-vault token swaps | "Swap 100 USDC to WETH" |
 | `AXON_EXECUTE_PROTOCOL` | DeFi protocol calls | Requires structured input |
 | `AXON_CHECK_BALANCE` | Check vault balance | "What's my balance?" |
+| `AXON_X402_PAYMENT` | Handle HTTP 402 paywalls | "Handle this x402 header: eyJ4..." |
 
 ## Provider
 
