@@ -75,17 +75,17 @@ Agent receives message → Action extracts params → SDK signs EIP-712 intent
 
 ### Mainnet
 
-| Chain        | ID    |
-| ------------ | ----- |
-| Base         | 8453  |
-| Arbitrum One | 42161 |
+| Chain        | ID    | Status      |
+| ------------ | ----- | ----------- |
+| Base         | 8453  | Coming soon |
+| Arbitrum One | 42161 | Coming soon |
 
 ### Testnet
 
-| Chain            | ID     |
-| ---------------- | ------ |
-| Base Sepolia     | 84532  |
-| Arbitrum Sepolia | 421614 |
+| Chain            | ID     | Status |
+| ---------------- | ------ | ------ |
+| Base Sepolia     | 84532  | Live   |
+| Arbitrum Sepolia | 421614 | Live   |
 
 ## Links
 
