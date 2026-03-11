@@ -1,11 +1,14 @@
 {
   "name": "@axonfi/plugin-elizaos",
   "version": "0.1.5",
-  "description": "ElizaOS plugin for Axon — treasury and payment infrastructure for AI agents",
+  "description": "ElizaOS plugin for Axon — agentic finance with secure vaults for AI agents",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "images"],
+  "files": [
+    "dist",
+    "images"
+  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit"
@@ -45,15 +48,33 @@
         "description": "Relayer URL (defaults to https://relay.axonfi.xyz)"
       }
     },
-    "actions": ["AXON_SEND_PAYMENT", "AXON_SWAP_TOKENS", "AXON_EXECUTE_PROTOCOL", "AXON_CHECK_BALANCE", "AXON_X402_PAYMENT"],
-    "providers": ["AXON_VAULT_CONTEXT"],
-    "services": ["AXON"]
+    "actions": [
+      "AXON_SEND_PAYMENT",
+      "AXON_SWAP_TOKENS",
+      "AXON_EXECUTE_PROTOCOL",
+      "AXON_CHECK_BALANCE",
+      "AXON_X402_PAYMENT"
+    ],
+    "providers": [
+      "AXON_VAULT_CONTEXT"
+    ],
+    "services": [
+      "AXON"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/axonfi/plugin-elizaos"
   },
   "homepage": "https://axonfi.xyz",
-  "keywords": ["elizaos", "plugin", "axon", "axonfi", "treasury", "payments", "ai-agents"],
+  "keywords": [
+    "elizaos",
+    "plugin",
+    "axon",
+    "axonfi",
+    "treasury",
+    "payments",
+    "ai-agents"
+  ],
   "license": "MIT"
 }

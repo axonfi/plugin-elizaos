@@ -5,7 +5,7 @@ import { USDC, CHAIN_NAMES, type Chain } from '@axonfi/sdk';
 export const checkBalanceAction: Action = {
   name: 'AXON_CHECK_BALANCE',
   description:
-    'Check the current token balances in the agent\'s Axon vault. Returns USDC balance by default, or specify a token.',
+    "Check the current token balances in the agent's Axon vault. Returns USDC balance by default, or specify a token.",
   similes: ['BALANCE', 'CHECK_BALANCE', 'HOW_MUCH', 'FUNDS', 'VAULT_BALANCE'],
 
   validate: async (runtime: IAgentRuntime, _message: Memory) => {

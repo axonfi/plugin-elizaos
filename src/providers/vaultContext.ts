@@ -13,11 +13,7 @@ export const vaultContextProvider: Provider = {
   dynamic: false,
   position: 10,
 
-  get: async (
-    runtime: IAgentRuntime,
-    _message: Memory,
-    _state: State,
-  ) => {
+  get: async (runtime: IAgentRuntime, _message: Memory, _state: State) => {
     const now = Date.now();
     if (cachedText && now - cachedAt < CACHE_TTL_MS) {
       return { text: cachedText };
@@ -34,10 +30,7 @@ export const vaultContextProvider: Provider = {
       const usdcAddress = USDC[chainId];
       const chainName = CHAIN_NAMES[chainId] ?? `Chain ${chainId}`;
 
-      const [balance, info] = await Promise.all([
-        svc.client.getBalance(usdcAddress),
-        svc.client.getVaultInfo(),
-      ]);
+      const [balance, info] = await Promise.all([svc.client.getBalance(usdcAddress), svc.client.getVaultInfo()]);
 
       const formatted = (Number(balance) / 1e6).toFixed(2);
       const status = info.paused ? 'PAUSED' : 'active';

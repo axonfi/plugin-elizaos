@@ -4,7 +4,7 @@ import { AxonService } from '../service.js';
 export const swapTokensAction: Action = {
   name: 'AXON_SWAP_TOKENS',
   description:
-    'Swap tokens within the agent\'s Axon vault (in-vault rebalancing). Specify source token, destination token, and amount to swap.',
+    "Swap tokens within the agent's Axon vault (in-vault rebalancing). Specify source token, destination token, and amount to swap.",
   similes: ['SWAP', 'CONVERT', 'EXCHANGE', 'REBALANCE', 'SWAP_TOKENS'],
 
   validate: async (runtime: IAgentRuntime, _message: Memory) => {

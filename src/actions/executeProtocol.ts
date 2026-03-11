@@ -4,7 +4,7 @@ import { AxonService } from '../service.js';
 export const executeProtocolAction: Action = {
   name: 'AXON_EXECUTE_PROTOCOL',
   description:
-    'Execute a DeFi protocol interaction through the agent\'s Axon vault. Requires protocol address, calldata, token, and amount. This is an advanced action for structured DeFi calls (approve → call → revoke).',
+    "Execute a DeFi protocol interaction through the agent's Axon vault. Requires protocol address, calldata, token, and amount. This is an advanced action for structured DeFi calls (approve → call → revoke).",
   similes: ['EXECUTE', 'CALL_PROTOCOL', 'DEFI', 'INTERACT', 'PROTOCOL'],
 
   validate: async (runtime: IAgentRuntime, _message: Memory) => {
@@ -48,7 +48,7 @@ Message: "${message.content.text}"`;
       params = JSON.parse(response);
     } catch {
       await callback?.({
-        text: 'I couldn\'t parse the protocol execution details. This action requires: protocol address, calldata, token, and amount.',
+        text: "I couldn't parse the protocol execution details. This action requires: protocol address, calldata, token, and amount.",
       });
       return { success: false, error: 'Failed to parse execute params' };
     }

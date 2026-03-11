@@ -1,6 +1,6 @@
 # @axonfi/plugin-elizaos
 
-ElizaOS plugin for [Axon](https://axonfi.xyz) — treasury and payment infrastructure for AI agents.
+ElizaOS plugin for [Axon](https://axonfi.xyz) — agentic finance with secure vaults for AI agents.
 
 ## Installation
 
@@ -30,17 +30,17 @@ The vault owner's wallet stays secure — the bot key can only sign intents with
 
 Add these environment variables (or character settings):
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `AXON_BOT_PRIVATE_KEY` | Yes | Bot's private key (EIP-712 signer) |
-| `AXON_VAULT_ADDRESS` | Yes | Axon vault contract address |
-| `AXON_CHAIN_ID` | Yes | Chain ID — use `Chain.Base` (8453), `Chain.ArbitrumOne` (42161), or `Chain.BaseSepolia` (84532) from `@axonfi/sdk` |
-| `AXON_RELAYER_URL` | No | Relayer URL (defaults to `https://relay.axonfi.xyz`) |
+| Variable               | Required | Description                                                                                                        |
+| ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
+| `AXON_BOT_PRIVATE_KEY` | Yes      | Bot's private key (EIP-712 signer)                                                                                 |
+| `AXON_VAULT_ADDRESS`   | Yes      | Axon vault contract address                                                                                        |
+| `AXON_CHAIN_ID`        | Yes      | Chain ID — use `Chain.Base` (8453), `Chain.ArbitrumOne` (42161), or `Chain.BaseSepolia` (84532) from `@axonfi/sdk` |
+| `AXON_RELAYER_URL`     | No       | Relayer URL (defaults to `https://relay.axonfi.xyz`)                                                               |
 
 ## Usage
 
 ```typescript
-import { axonPlugin } from "@axonfi/plugin-elizaos";
+import { axonPlugin } from '@axonfi/plugin-elizaos';
 
 const agent = new AgentRuntime({
   // ...
@@ -50,13 +50,13 @@ const agent = new AgentRuntime({
 
 ## Actions
 
-| Action | Description | Example |
-|--------|-------------|---------|
-| `AXON_SEND_PAYMENT` | Send token payments | "Send 50 USDC to 0xabc..." |
-| `AXON_SWAP_TOKENS` | In-vault token swaps | "Swap 100 USDC to WETH" |
-| `AXON_EXECUTE_PROTOCOL` | DeFi protocol calls | Requires structured input |
-| `AXON_CHECK_BALANCE` | Check vault balance | "What's my balance?" |
-| `AXON_X402_PAYMENT` | Handle HTTP 402 paywalls | "Handle this x402 header: eyJ4..." |
+| Action                  | Description              | Example                            |
+| ----------------------- | ------------------------ | ---------------------------------- |
+| `AXON_SEND_PAYMENT`     | Send token payments      | "Send 50 USDC to 0xabc..."         |
+| `AXON_SWAP_TOKENS`      | In-vault token swaps     | "Swap 100 USDC to WETH"            |
+| `AXON_EXECUTE_PROTOCOL` | DeFi protocol calls      | Requires structured input          |
+| `AXON_CHECK_BALANCE`    | Check vault balance      | "What's my balance?"               |
+| `AXON_X402_PAYMENT`     | Handle HTTP 402 paywalls | "Handle this x402 header: eyJ4..." |
 
 ## Provider
 

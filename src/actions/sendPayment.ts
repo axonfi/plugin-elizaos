@@ -4,7 +4,7 @@ import { AxonService } from '../service.js';
 export const sendPaymentAction: Action = {
   name: 'AXON_SEND_PAYMENT',
   description:
-    'Send a token payment from the agent\'s Axon vault. Supports USDC (default), WETH, and other ERC-20 tokens. Specify recipient address, amount, and optionally token and memo.',
+    "Send a token payment from the agent's Axon vault. Supports USDC (default), WETH, and other ERC-20 tokens. Specify recipient address, amount, and optionally token and memo.",
   similes: ['PAY', 'SEND', 'TRANSFER', 'SEND_PAYMENT', 'SEND_USDC', 'PAY_USDC'],
 
   validate: async (runtime: IAgentRuntime, _message: Memory) => {
@@ -39,7 +39,7 @@ Message: "${message.content.text}"`;
       params = JSON.parse(response);
     } catch {
       await callback?.({
-        text: 'I couldn\'t parse the payment details. Please specify: recipient address, amount, and optionally token (default USDC).',
+        text: "I couldn't parse the payment details. Please specify: recipient address, amount, and optionally token (default USDC).",
       });
       return { success: false, error: 'Failed to parse payment params' };
     }
@@ -86,7 +86,10 @@ Message: "${message.content.text}"`;
       { name: 'agent', content: { text: 'Sending payment...', action: 'AXON_SEND_PAYMENT' } },
     ],
     [
-      { name: 'user', content: { text: 'Pay 0.5 WETH to 0xabcdefabcdefabcdefabcdefabcdefabcdefabcd with memo "API invoice #42"' } },
+      {
+        name: 'user',
+        content: { text: 'Pay 0.5 WETH to 0xabcdefabcdefabcdefabcdefabcdefabcdefabcd with memo "API invoice #42"' },
+      },
       { name: 'agent', content: { text: 'Processing WETH payment...', action: 'AXON_SEND_PAYMENT' } },
     ],
   ],

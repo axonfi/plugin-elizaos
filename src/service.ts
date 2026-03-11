@@ -3,7 +3,8 @@ import { AxonClient, type Chain } from '@axonfi/sdk';
 
 export class AxonService extends Service {
   static serviceType = 'AXON';
-  capabilityDescription = 'Enables gasless payments, token swaps, and DeFi interactions through Axon non-custodial vaults.';
+  capabilityDescription =
+    'Enables gasless payments, token swaps, and DeFi interactions through Axon non-custodial vaults.';
 
   client!: AxonClient;
 
@@ -29,11 +30,11 @@ export class AxonService extends Service {
     const active = await svc.client.isActive();
     if (!active) {
       runtime.logger.warn(
-        `Axon bot ${svc.client.botAddress} is NOT active on vault ${vaultAddress}. Payments will fail.`
+        `Axon bot ${svc.client.botAddress} is NOT active on vault ${vaultAddress}. Payments will fail.`,
       );
     } else {
       runtime.logger.info(
-        `Axon plugin ready — bot ${svc.client.botAddress} on vault ${vaultAddress} (chain ${chainId})`
+        `Axon plugin ready — bot ${svc.client.botAddress} on vault ${vaultAddress} (chain ${chainId})`,
       );
     }
 

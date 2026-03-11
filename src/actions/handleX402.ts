@@ -42,7 +42,7 @@ Message: "${message.content.text}"`;
       headerValue = parsed.header;
     } catch {
       await callback?.({
-        text: 'I couldn\'t find an x402 PAYMENT-REQUIRED header in your message. Please provide the header value (base64 or JSON).',
+        text: "I couldn't find an x402 PAYMENT-REQUIRED header in your message. Please provide the header value (base64 or JSON).",
       });
       return { success: false, error: 'Failed to extract x402 header' };
     }
@@ -55,11 +55,7 @@ Message: "${message.content.text}"`;
     }
 
     try {
-      const result = await svc.client.x402.handlePaymentRequired(
-        { 'PAYMENT-REQUIRED': headerValue },
-        120_000,
-        5_000,
-      );
+      const result = await svc.client.x402.handlePaymentRequired({ 'PAYMENT-REQUIRED': headerValue }, 120_000, 5_000);
 
       const lines = [
         `x402 payment handled!`,
@@ -82,11 +78,21 @@ Message: "${message.content.text}"`;
 
   examples: [
     [
-      { name: 'user', content: { text: 'Handle this x402 payment: eyJ4NDAyVmVyc2lvbiI6MSwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vZGF0YSJ9LCJhY2NlcHRzIjpbeyJwYXlUbyI6IjB4MTIzNCIsImFtb3VudCI6IjEwMDAwMDAiLCJhc3NldCI6IjB4YWFhIiwibmV0d29yayI6ImVpcDE1NTo4NDUzIn1dfQ==' } },
+      {
+        name: 'user',
+        content: {
+          text: 'Handle this x402 payment: eyJ4NDAyVmVyc2lvbiI6MSwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vZGF0YSJ9LCJhY2NlcHRzIjpbeyJwYXlUbyI6IjB4MTIzNCIsImFtb3VudCI6IjEwMDAwMDAiLCJhc3NldCI6IjB4YWFhIiwibmV0d29yayI6ImVpcDE1NTo4NDUzIn1dfQ==',
+        },
+      },
       { name: 'agent', content: { text: 'Processing x402 payment...', action: 'AXON_X402_PAYMENT' } },
     ],
     [
-      { name: 'user', content: { text: 'I got a 402 response with this payment header: {"x402Version":1,"resource":{"url":"https://api.example.com/forecast"},"accepts":[{"payTo":"0xmerchant","amount":"500000","asset":"0xUSDC","network":"eip155:8453"}]}' } },
+      {
+        name: 'user',
+        content: {
+          text: 'I got a 402 response with this payment header: {"x402Version":1,"resource":{"url":"https://api.example.com/forecast"},"accepts":[{"payTo":"0xmerchant","amount":"500000","asset":"0xUSDC","network":"eip155:8453"}]}',
+        },
+      },
       { name: 'agent', content: { text: 'Handling x402 paywall...', action: 'AXON_X402_PAYMENT' } },
     ],
   ],
