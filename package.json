@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "@elizaos/core": "^1.7.0",
-    "typescript": "^5.7.0",
-    "tsup": "^8.0.0"
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
   },
   "agentConfig": {
     "pluginType": "elizaos:plugin:1.0.0",
