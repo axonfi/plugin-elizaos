@@ -94,7 +94,7 @@ Agent receives message → Action extracts params → SDK signs EIP-712 intent
 - [Documentation](https://axonfi.xyz/llms.txt)
 - [npm — @axonfi/sdk](https://www.npmjs.com/package/@axonfi/sdk) (TypeScript SDK)
 - [PyPI — axonfi](https://pypi.org/project/axonfi/) (Python SDK)
-- [Smart Contracts](https://github.com/axonfi/smart-contracts)
+- [Smart Contracts](https://github.com/axonfi/core)
 - [Examples](https://github.com/axonfi/examples)
 - [Twitter/X — @axonfixyz](https://x.com/axonfixyz)
 
