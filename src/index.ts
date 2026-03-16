@@ -5,6 +5,7 @@ import { swapTokensAction } from './actions/swapTokens.js';
 import { executeProtocolAction } from './actions/executeProtocol.js';
 import { checkBalanceAction } from './actions/checkBalance.js';
 import { handleX402Action } from './actions/handleX402.js';
+import { getVaultValueAction } from './actions/getVaultValue.js';
 import { vaultContextProvider } from './providers/vaultContext.js';
 
 export const axonPlugin: Plugin = {
@@ -12,7 +13,14 @@ export const axonPlugin: Plugin = {
   description:
     'Treasury and payment infrastructure for AI agents via AxonFi. Gasless payments, token swaps, DeFi interactions, and x402 paywall handling through non-custodial vaults.',
   services: [AxonService as any],
-  actions: [sendPaymentAction, swapTokensAction, executeProtocolAction, checkBalanceAction, handleX402Action],
+  actions: [
+    sendPaymentAction,
+    swapTokensAction,
+    executeProtocolAction,
+    checkBalanceAction,
+    handleX402Action,
+    getVaultValueAction,
+  ],
   providers: [vaultContextProvider],
 };
 
@@ -23,4 +31,5 @@ export { swapTokensAction } from './actions/swapTokens.js';
 export { executeProtocolAction } from './actions/executeProtocol.js';
 export { checkBalanceAction } from './actions/checkBalance.js';
 export { handleX402Action } from './actions/handleX402.js';
+export { getVaultValueAction } from './actions/getVaultValue.js';
 export { vaultContextProvider } from './providers/vaultContext.js';
