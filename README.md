@@ -77,8 +77,8 @@ Agent receives message → Action extracts params → SDK signs EIP-712 intent
 
 | Chain        | ID    | Status      |
 | ------------ | ----- | ----------- |
-| Base         | 8453  | Coming soon |
-| Arbitrum One | 42161 | Coming soon |
+| Base         | 8453  | Live |
+| Arbitrum One | 42161 | Live |
 
 ### Testnet
 
